@@ -1,0 +1,17 @@
+<div style="padding: 1rem;">
+  <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+    <h4>SimpleProject App</h4>
+    <app-theme-toggle></app-theme-toggle>
+  </header>
+  
+  <nav style="margin-bottom: 1rem;">
+    <a routerLink="/login" style="margin-right: 1rem;">Login</a>
+    <a routerLink="/register">Register</a>
+  </nav>
+  
+  <hr>
+  
+  <main>
+    <router-outlet />
+  </main>
+</div>

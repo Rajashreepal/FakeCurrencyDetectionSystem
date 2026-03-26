@@ -1,0 +1,37 @@
+<div style="max-width: 400px; margin: 2rem auto; padding: 2rem; background-color: var(--bg-secondary); border-radius: 0.5rem; border: 1px solid var(--border-color);">
+  <h2 style="text-align: center; margin-bottom: 2rem;">Login</h2>
+  
+  <form style="display: flex; flex-direction: column; gap: 1rem;">
+    <div>
+      <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Username:</label>
+      <input 
+        [(ngModel)]="user.username" 
+        placeholder="Enter your username" 
+        name="username" 
+        required
+        style="width: 100%; padding: 0.75rem; font-size: 1rem;">
+    </div>
+    
+    <div>
+      <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Password:</label>
+      <input 
+        [(ngModel)]="user.password" 
+        type="password" 
+        placeholder="Enter your password" 
+        name="password" 
+        required
+        style="width: 100%; padding: 0.75rem; font-size: 1rem;">
+    </div>
+    
+    <button 
+      type="button" 
+      (click)="login()"
+      style="width: 100%; padding: 0.75rem; font-size: 1rem; margin-top: 1rem;">
+      Login
+    </button>
+    
+    <p style="text-align: center; margin-top: 1rem;">
+      Don't have an account? <a routerLink="/register">Register here</a>
+    </p>
+  </form>
+</div>
