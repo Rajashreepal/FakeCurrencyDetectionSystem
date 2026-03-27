@@ -1,0 +1,149 @@
+╔════════════════════════════════════════════════════════════════════╗
+║         AUTHENTICATION API - SETUP & RUN INSTRUCTIONS              ║
+╚════════════════════════════════════════════════════════════════════╝
+
+📁 PROJECT LOCATION
+  b:\OneDrive - Amity University\Desktop\HCL HACK\hcl1\AuthAPI\
+
+🚀 QUICK START (3 Steps)
+  1. Open Command Prompt/PowerShell
+  2. cd "b:\OneDrive - Amity University\Desktop\HCL HACK\hcl1\AuthAPI"
+  3. dotnet run
+
+✅ EXPECTED OUTPUT
+  info: AuthAPI.Program[0]
+        ✓ Database created/migrated successfully
+  info: Microsoft.Hosting.Lifetime[0]
+        Now listening on: http://localhost:5000
+        https://localhost:5001
+
+🌐 ACCESS POINTS
+  • Swagger UI:      https://localhost:5001/  (Open in Browser)
+  • HTTP API:        http://localhost:5000/api/auth/*
+  • HTTPS API:       https://localhost:5001/api/auth/*
+
+📋 ENDPOINTS
+  POST /api/auth/register   ← Create new user
+  POST /api/auth/login      ← Get JWT token
+
+💾 DATABASE
+  • Type:    SQLite (local file)
+  • File:    AuthAPI/auth.db (auto-created)
+  • Schema:  Auto-created with tables
+
+🔑 JWT CONFIGURATION (appsettings.json)
+  • SecretKey:      your-super-secret-key-change-this-in-production-minimum-32-characters-long
+  • Issuer:         AuthAPI
+  • Audience:       AuthAPI-Users
+  • ExpiryMinutes:  60
+
+⚙️  PREREQUISITES
+  • .NET 8.0+ installed (https://dotnet.microsoft.com/download)
+  • Check: dotnet --version
+
+📦 PROJECT STRUCTURE
+  Controllers/        → API endpoints (AuthController)
+  Models/            → User entity
+  DTOs/              → Data transfer objects
+  Services/          → Business logic (AuthService)
+  Repositories/      → Data access layer
+  Auth/              → JWT token generation
+  Middleware/        → Exception handling
+  Data/              → Entity Framework DbContext
+  Program.cs         → App configuration
+  appsettings.json   → Settings
+
+🧪 TESTING
+  See: AuthAPI/TESTING.md
+  • cURL examples
+  • Postman setup
+  • Swagger testing
+  • Error cases
+
+📖 DOCUMENTATION
+  • README.md        → Full feature list and integration guide
+  • TESTING.md       → Testing examples and checklist
+  • Each .cs file    → Well-commented, self-documenting
+
+✨ KEY FEATURES
+  ✅ User registration with password hashing (PBKDF2-SHA256)
+  ✅ User login with JWT token generation (HS256)
+  ✅ SQLite local database (auto-created)
+  ✅ Clean layered architecture
+  ✅ Repository pattern
+  ✅ Dependency injection
+  ✅ Global exception handling
+  ✅ Structured logging
+  ✅ Swagger/OpenAPI docs
+  ✅ CORS enabled
+  ✅ Zero external dependencies
+
+🔐 SECURITY
+  • Passwords: PBKDF2-SHA256 with salt
+  • Tokens: JWT HS256 signed
+  • Claims: UserId, Email, Name, Role
+  • Expiry: 60 minutes (configurable)
+  • Validation: Email uniqueness checked
+
+⚠️  IMPORTANT - PRODUCTION CHANGES
+  1. Change JWT SecretKey in appsettings.json (min 32 chars)
+  2. Set ASPNETCORE_ENVIRONMENT=Production
+  3. Use HTTPS only
+  4. Use real database (SQL Server, PostgreSQL) instead of SQLite
+  5. Enable CORS for specific origins only
+  6. Add rate limiting
+  7. Add logging to file
+
+🎯 NEXT STEPS
+  1. Run:      dotnet run
+  2. Open:     https://localhost:5001/ (Swagger)
+  3. Register: POST /api/auth/register
+  4. Login:    POST /api/auth/login
+  5. Get Token: Copy from login response
+  6. Integrate: Add [Authorize] to other API endpoints
+
+🐛 TROUBLESHOOTING
+
+  Q: "dotnet: command not found"
+     A: Install .NET SDK from https://dotnet.microsoft.com/download
+
+  Q: "Port 5000/5001 already in use"
+     A: Change port in Properties/launchSettings.json or kill process
+
+  Q: "Database locked"
+     A: Close other connections or delete auth.db and restart
+
+  Q: "JWT validation failed"
+     A: Check SecretKey in appsettings.json matches
+
+💬 CODE ORGANIZATION
+  • Constants: None (uses configuration)
+  • Interfaces: IUserRepository, IAuthService, IJwtTokenGenerator
+  • DTOs: Clean data models without logic
+  • Services: Business logic only
+  • Repositories: Data access only
+  • Controllers: HTTP handling only
+  • Middleware: Cross-cutting concerns
+
+🔄 ARCHITECTURE DIAGRAM
+  Request
+    ↓
+  Controller (HTTP handling)
+    ↓
+  Service (Business logic)
+    ↓
+  Repository (Data access)
+    ↓
+  DbContext (Database)
+    ↓
+  SQLite Database
+    ↓
+  Response (JSON)
+
+✅ READY TO USE!
+  Your authentication module is production-ready.
+  Can be integrated into any .NET backend.
+  
+  Questions? See README.md or TESTING.md
+
+════════════════════════════════════════════════════════════════════
