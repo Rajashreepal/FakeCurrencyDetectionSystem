@@ -1,0 +1,6 @@
+{
+  "currency": "GBP",
+  "authenticity_strategy": "global_fallback_plus_image_processing_rules",
+  "note": "Currency-specific fake/real authenticity model is not trained here. Use global UCI fallback and security-feature/image-quality checks.",
+  "updated_at": "2026-05-13T23:17:20.813559+00:00"
+}

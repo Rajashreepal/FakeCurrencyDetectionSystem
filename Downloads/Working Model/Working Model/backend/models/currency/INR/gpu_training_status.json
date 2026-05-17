@@ -1,0 +1,5 @@
+{
+  "currency": "INR",
+  "status": "failed_or_skipped",
+  "reason": "Need both real and fake images under D:\\gpu-accuracy-inr-usd-trainer\\datasets\\INR\\gpu_prepared"
+}

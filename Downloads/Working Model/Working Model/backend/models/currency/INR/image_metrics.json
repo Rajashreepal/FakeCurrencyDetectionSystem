@@ -1,0 +1,95 @@
+{
+  "task_name": "INR authenticity",
+  "classes": [
+    "genuine",
+    "counterfeit"
+  ],
+  "num_classes": 2,
+  "train_samples": 39735,
+  "val_samples": 9933,
+  "best_balanced_accuracy": 0.8158073472758787,
+  "latest_val_accuracy": 0.8215040773180308,
+  "latest_balanced_accuracy": 0.8072182285468998,
+  "target_accuracy": 0.9,
+  "target_reached": false,
+  "history_tail": [
+    {
+      "round": 1,
+      "epoch": 1,
+      "val_accuracy": 0.8245243128964059,
+      "balanced_accuracy": 0.8101088887802175,
+      "best_balanced_accuracy": 0.8101088887802175
+    },
+    {
+      "round": 1,
+      "epoch": 2,
+      "val_accuracy": 0.8308668076109936,
+      "balanced_accuracy": 0.8158073472758787,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 3,
+      "val_accuracy": 0.825732407127756,
+      "balanced_accuracy": 0.8090989236094132,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 4,
+      "val_accuracy": 0.8280479210711769,
+      "balanced_accuracy": 0.812618519786352,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 5,
+      "val_accuracy": 0.8247256619349642,
+      "balanced_accuracy": 0.8100117636830924,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 6,
+      "val_accuracy": 0.8285512936675727,
+      "balanced_accuracy": 0.8131673105449329,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 7,
+      "val_accuracy": 0.8273431994362227,
+      "balanced_accuracy": 0.8122171146646671,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 8,
+      "val_accuracy": 0.8203966576059599,
+      "balanced_accuracy": 0.8063576866024418,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 9,
+      "val_accuracy": 0.8131480922178597,
+      "balanced_accuracy": 0.8003046875424498,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 10,
+      "val_accuracy": 0.8138528138528138,
+      "balanced_accuracy": 0.8004296596953939,
+      "best_balanced_accuracy": 0.8158073472758787
+    },
+    {
+      "round": 1,
+      "epoch": 11,
+      "val_accuracy": 0.8215040773180308,
+      "balanced_accuracy": 0.8072182285468998,
+      "best_balanced_accuracy": 0.8158073472758787
+    }
+  ],
+  "updated_at": "2026-05-14T09:48:39.423570+00:00"
+}
